@@ -80,6 +80,7 @@ class NeuralNetwork:
                 delta = np.atleast_2d(deltas[i])  # delta存的是误差
                 self.weight[i] += learning_rate * layer.T.dot(delta)  # 误差与单元格的值的内积
         print 1
+
     # 预测过程
     def predict(self, x):
         x = np.array(x)
